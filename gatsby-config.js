@@ -6,8 +6,22 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `gatsby-plugin-sass`,//gatsbyでsassを動かすプラグイン
+    `gatsby-transformer-remark`,//新しく追加したプラグイン
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    
+    //ヘッドレスCMS　contentfulと繋げるためのプラグイン----
+    //contentfulの方でAPIKeyを作成してください
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `59xl3gmbdmw4`,
+        accessToken: `65wxUjd57o-cPqS7eMLt-TxnusmorOGHn-aXmDVW8Yw`,
+      },
+    },
+    //-----------------------------------------------
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -15,6 +29,19 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    
+    //dataフォルダも読み込ませるため追加------
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/data`,
+      },
+    },
+
+    //-----------------------------------
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
