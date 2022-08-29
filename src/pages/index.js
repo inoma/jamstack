@@ -1,6 +1,8 @@
 import * as React from "react"
 
-import { Link } from "gatsby" //リンク
+import { graphql } from "gatsby"
+
+import { Link } from "gatsby" //リンクだ
 //import * as style from "../styles/index.module.css"//CSS呼び出し
 
 import{ StaticImage } from "gatsby-plugin-image"
@@ -17,7 +19,7 @@ import Layout from "../components/layout"
 
 import * as style from "../styles/index.module.scss"
 
-const Index = () => {
+const Index = (props) => {
     return (
       <Layout>
         <div className={style.hero}>
@@ -39,7 +41,7 @@ const Index = () => {
           <div className={style.container}>
             <div className={style.company}>
               <h2>弊社について</h2>
-              <p>Last Update: 2031/03/14</p>
+              <p>Last Update: {props.data.contentfulLastupdate.lastupdate}</p>
               <p>Lorem Ipsum is simply summy text of the aaaaaaaaaa
                 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -69,3 +71,12 @@ const Index = () => {
 }
 
 export default Index
+
+export const query = graphql`
+query IndexQuery {
+  contentfulLastupdate {
+    lastupdate(formatString: "YYY-MM-DD")
+  }
+}
+
+`
