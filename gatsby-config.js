@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    defaultTitle: `jamstack site`,
+    defaultDescription: `モダン開発を得意とする〜〜〜〜〜〜`,
+    defaultImage: `src/images/social-card.png`,
+    siteUrl: `https://effulgent-alpaca-ca6cae.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-sass`,//gatsbyでsassを動かすプラグイン

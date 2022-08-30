@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import { graphql } from "gatsby"
+import Seo from "../components/seo"
 
 import { Link } from "gatsby" //リンクだ
 //import * as style from "../styles/index.module.css"//CSS呼び出し
@@ -22,6 +23,7 @@ import * as style from "../styles/index.module.scss"
 const Index = (props) => {
     return (
       <Layout>
+        <Seo title="ここにサイトタイトル" description="このサイトはテストサイトです" />
         <div className={style.hero}>
           {/*
             gatsby-plugin-imageのできる設定一覧
