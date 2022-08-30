@@ -44,9 +44,7 @@ const Index = (props) => {
             <div className={style.company}>
               <h2>弊社について</h2>
               <p>Last Update: {props.data.contentfulLastupdate.lastupdate}</p>
-              <p>Lorem Ipsum is simply summy text of the aaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+              <p>あいうえお
               </p>
             </div>
             <StaticImage src="../images/company.jpg" alt="company" 
