@@ -44,7 +44,7 @@ const Index = (props) => {
             <div className={style.company}>
               <h2>弊社について</h2>
               <p>Last Update: {props.data.contentfulLastupdate.lastupdate}</p>
-              <p>あいうえお　かきくけこ　おお
+              <p>あいうえお
               </p>
             </div>
             <StaticImage src="../images/company.jpg" alt="company" 
